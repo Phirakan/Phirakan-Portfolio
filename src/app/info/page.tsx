@@ -1,16 +1,13 @@
-//rafce
+import Counter from "../components/counter"
 
-import Link from "next/link"
 
 const page = () => {
+  
   return (
     <div>
-
-      <h1>HomePage</h1>
+      <Counter />
     </div>
   )
 }
 
 export default page
-
-
