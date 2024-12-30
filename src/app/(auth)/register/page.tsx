@@ -4,6 +4,7 @@ import FormInput from "../../components/FormInput";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
+    username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -16,6 +17,10 @@ export default function RegisterPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formData.username) {
+      alert("Username is required!");
+      return;
+    }
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
@@ -29,6 +34,20 @@ export default function RegisterPage() {
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Register</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+              Username
+            </label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              value={formData.username}
+              onChange={handleChange}
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Enter your username"
+            />
+          </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email
