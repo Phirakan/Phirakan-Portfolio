@@ -1,12 +1,13 @@
 import Navbar from './components/navbar'
+import Footer from './components/footer';
 import './globals.css';
 import { Metadata } from 'next';
 
 
 export const metadata: Metadata = {
-  title: 'RazeCar | Next.js Starter',
-  description: 'A Next.js 15 starter with TypeScript, Tailwind CSS, and ESLint.',
-  keywords: ['Next.js', 'TypeScript', 'Tailwind CSS', 'RazeCar', 'E-commerce'],
+  title: 'Phirakan - Portfolio',
+  description: 'Phirakan Khongphet Portfolio Website Developed with Next.js | TypeScript | Tailwind CSS',
+  keywords: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Phirakan', 'Portfolio'],
 };
 
 
@@ -16,6 +17,8 @@ const layout = ({children}) => {
     <body>
       <Navbar />
       {children}
+
+      <Footer />
     </body>
    </html>
   )

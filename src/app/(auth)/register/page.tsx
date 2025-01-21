@@ -1,51 +1,77 @@
 "use client";
+
 import { useState } from "react";
-import FormInput from "../../components/FormInput";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
-    username: "",
+    fullName: "",
     email: "",
     password: "",
-    confirmPassword: "",
+   
   });
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!formData.username) {
-      alert("Username is required!");
-      return;
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+
+
+    try {
+      const response = await fetch("http://127.0.0.1:3333/api/v1/register", {
+        method: "POST",
+        
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "An error occurred during registration.");
+      }
+
+      setSuccess("Registration successful! Please log in.");
+      setFormData({ fullName: "", email: "", password: ""}); // Reset form
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-    console.log("Register Data:", formData);
-    // Add API call or validation logic here
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Register</h1>
+        {error && <div className="mb-4 text-red-500 text-sm">{error}</div>}
+        {success && <div className="mb-4 text-green-500 text-sm">{success}</div>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-              Username
+            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+              Full Name
             </label>
             <input
-              id="username"
-              name="username"
+              id="fullName"
+              name="fullName"
               type="text"
-              value={formData.username}
+              value={formData.fullName}
               onChange={handleChange}
               className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Enter your username"
+              placeholder="Enter your full name"
+              required
             />
           </div>
           <div>
@@ -60,6 +86,7 @@ export default function RegisterPage() {
               onChange={handleChange}
               className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your email"
+              required
             />
           </div>
           <div>
@@ -74,27 +101,18 @@ export default function RegisterPage() {
               onChange={handleChange}
               className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your password"
+              required
             />
           </div>
-          <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-              Confirm Password
-            </label>
-            <input
-              id="confirmPassword"
-              name="confirmPassword"
-              type="password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Confirm your password"
-            />
-          </div>
+
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className={`w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+              loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={loading}
           >
-            Register
+            {loading ? "Registering..." : "Register"}
           </button>
         </form>
       </div>
