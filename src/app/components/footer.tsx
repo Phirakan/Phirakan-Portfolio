@@ -3,10 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <footer className="mt-8 text-sm  text-white " style={{ backgroundColor: '#5157C0' }}>
+      <footer className="mt-8 text-sm text-white" style={{ backgroundColor: '#5157C0' }}>
         <div>
-          <p className="text-xl mt-2 px-16 text-left font-semibold text-gray-100"> Contact me<br />
-          </p>
+          <p className="text-xl mt-2 px-16 text-left font-semibold text-gray-100">Contact me<br /></p>
           <a
             href="mailto:peerakan03@gmail.com"
             className="text-xl mt-2 px-16 text-left font-semibold text-gray-100"
@@ -24,10 +23,12 @@ const Footer = () => {
               <img src="ig.png" alt="Instagram" className="h-8" />
             </a>
           </div>
-
         </div>
 
-
+        {/* Copyright Section */}
+        <div className="text-center  text-l font-semibold text-gray-100">
+          © 2025 Phirakan Khongphet. All rights reserved.
+        </div>
       </footer>
     </>
   );
