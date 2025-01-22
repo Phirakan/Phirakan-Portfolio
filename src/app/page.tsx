@@ -34,24 +34,47 @@ const Home = () => {
         <meta name="description" content="Portfolio website of Phirakan Khongphet" />
       </Head>
 
-      {/* Header */}
-      <header className="text-center py-10 bg-white">
+      {/* Header (Overview) */}
+      <header id="overview" className="text-center  bg-white min-h-screen flex flex-col justify-center">
         <h1 className="text-4xl font-bold">Phirakan Khongphet</h1>
         <p className="text-xl text-gray-700 mt-2">- Developer -</p>
         <p className="text-xl font-bold text-black mt-2">___________________________________________________________________________________________________________________</p>
         <div className="flex justify-center items-center flex-wrap gap-4 mt-6">
-          <img src="/adonisjs.png" alt="AdonisJS" className="w-16 h-auto" />
-          <img src="/logo-laravel-icon-1024.png" alt="Laravel" className="w-16 h-auto" />
-          <img src="/PHP-Logo.png" alt="PHP" className="w-16 h-auto" />
-          <img src="/java.png" alt="Java" className="w-16 h-auto" />
-          <img src="/docker.png" alt="Docker" className="w-16 h-auto" />
-          <img src="/flutter_logo-freelogovectors.net_.png" alt="Flutter" className="w-16 h-auto" />
-          <img src="/next.svg" alt="Next.js" className="w-16 h-auto" />
-          <img src="/React.png" alt="React" className="w-16 h-auto" />
-          <img src="/ant.png" alt="Ant Design" className="w-16 h-auto" />
-          <img src="/tailwind.png" alt="Tailwind CSS" className="w-16 h-auto" />
-          <img src="/github.png" alt="Github" className="w-16 h-auto" />
+          <a href="https://adonisjs.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/adonisjs.png" alt="AdonisJS" className="w-16 h-auto" />
+          </a>
+          <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/logo-laravel-icon-1024.png" alt="Laravel" className="w-16 h-auto" />
+          </a>
+          <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer">
+            <img src="/PHP-Logo.png" alt="PHP" className="w-16 h-auto" />
+          </a>
+          <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/java.png" alt="Java" className="w-16 h-auto" />
+          </a>
+          <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/docker.png" alt="Docker" className="w-16 h-auto" />
+          </a>
+          <a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer">
+            <img src="/flutter_logo-freelogovectors.net_.png" alt="Flutter" className="w-16 h-auto" />
+          </a>
+          <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+            <img src="/next.svg" alt="Next.js" className="w-16 h-auto" />
+          </a>
+          <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+            <img src="/React.png" alt="React" className="w-16 h-auto" />
+          </a>
+          <a href="https://ant.design/" target="_blank" rel="noopener noreferrer">
+            <img src="/ant.png" alt="Ant Design" className="w-16 h-auto" />
+          </a>
+          <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/tailwind.png" alt="Tailwind CSS" className="w-16 h-auto" />
+          </a>
+          <a href="https://github.com/Phirakan" target="_blank" rel="noopener noreferrer">
+            <img src="/github.png" alt="Github" className="w-16 h-auto" />
+          </a>
         </div>
+
         <p className="text-lg font-semibold leading-relaxed max-w-2xl mx-auto mt-6">
           Hi! My name is <span className="font-bold">Mosu</span>, and I’m <span className="font-bold">{age} years old</span>. My full name is <span className="font-bold">Phirakan Khongphet</span>.
           I’m a web developer from Thailand, with a strong focus on back-end development. This website showcases all my work.
@@ -63,7 +86,6 @@ const Home = () => {
       <section id="projects" className="py-10 bg-white text-center">
         <h2 className="text-3xl font-bold">My Project 💻</h2>
         <p className="text-xl font-bold text-black mt-2">_____________________________________________________________________________________________________________________________________________</p>
-
 
         <div className="flex justify-center items-center mt-8 gap-4">
           {/* Project 1 */}
@@ -114,9 +136,10 @@ const Home = () => {
 
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-4  mx-96 text-center rounded-xl bg-gray-500 text-gray-100">
+      {/* Support Section */}
+      <section id="Tipme" className="py-4 text-center rounded-xl  text-black">
         <h2 className="text-3xl  font-bold">Buy me coffee ☕</h2>
+        <p className="text-xl font-bold text-black mt-2">__________________________________________________________________________________</p>
         <div className="flex justify-center mt-8 gap-8">
           <div>
             <img
@@ -128,13 +151,13 @@ const Home = () => {
           </div>
           <div className="flex flex-col justify-center items-center">
             <p className="text-lg font-semibold">OR</p>
-            <a
-              href="mailto:peerakan03@gmail.com"
+            <p
+
               className="mt-4 px-4 py-2 text-white rounded hover:bg-blue-700"
               style={{ backgroundColor: "#6878DD" }}
             >
               peerakan03@gmail.com
-            </a>
+            </p>
             <p className="mt-2">Paypal</p>
           </div>
         </div>
