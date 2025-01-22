@@ -3,10 +3,10 @@ import Link from 'next/link'
 const Navbar = () => {
   return (
     <>
-   {/* Navbar */}
-   <nav className="flex justify-between rounded-b-xl items-center p-4  text-white" style={{backgroundColor: '#5157C0'}}>
+      {/* Navbar */}
+      <nav className="flex justify-between items-center p-4 text-white bg-[#5157C0] sticky top-0 z-50">
         <div className="flex gap-8 font-semibold text-lg">
-          <Link href="/">Overview</Link>
+          <Link href="#overview">Overview</Link>
           <Link href="#projects">My Project</Link>
           <Link href="#about">About Me</Link>
         </div>
@@ -18,7 +18,6 @@ const Navbar = () => {
           Download CV
         </a>
       </nav>
-
     </>
   )
 }
