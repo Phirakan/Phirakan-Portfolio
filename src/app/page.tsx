@@ -53,8 +53,8 @@ const Home = () => {
           <img src="/github.png" alt="Github" className="w-16 h-auto" />
         </div>
         <p className="text-lg font-semibold leading-relaxed max-w-2xl mx-auto mt-6">
-          Hi! My name is <span className="font-bold">Mosu</span>, and I’m <span className="font-bold">{age} years old</span>. My full name is <span className="font-bold">Phirakan Khongphet</span>. 
-          I’m a web developer from Thailand, with a strong focus on back-end development. This website showcases all my work. 
+          Hi! My name is <span className="font-bold">Mosu</span>, and I’m <span className="font-bold">{age} years old</span>. My full name is <span className="font-bold">Phirakan Khongphet</span>.
+          I’m a web developer from Thailand, with a strong focus on back-end development. This website showcases all my work.
           Thanks for your interest and for visiting my site—I hope you enjoy exploring my projects!
         </p>
       </header>
@@ -66,54 +66,54 @@ const Home = () => {
 
 
         <div className="flex justify-center items-center mt-8 gap-4">
-  {/* Project 1 */}
-  <div className="w-64 h-full bg-gray-100 shadow-lg p-4 rounded-lg" style={{ backgroundColor: "#8291F3" }}>
-    <img src="/food.png" alt="Food Restaurant" className="w-full h-40 object-cover rounded-xl" />
-    <h3 className="text-xl font-bold pt-4">Food Restaurant</h3>
-    <p className="text-sm mt-2 text-left font-semibold text-gray-100">
-      Develop a Web Application for ordering food via QR Code (Back-End) using PHP.
-    </p>
-    <a
-      href="#"
-      className="inline-block mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white"
-    >
-      View on Github
-    </a>
-  </div>
+          {/* Project 1 */}
+          <div className="w-64 h-full bg-gray-100 shadow-lg p-4 rounded-lg" style={{ backgroundColor: "#8291F3" }}>
+            <img src="/food.png" alt="Food Restaurant" className="w-full h-40 object-cover rounded-xl" />
+            <h3 className="text-xl font-bold pt-4">Food Restaurant</h3>
+            <p className="text-sm mt-2 text-left font-semibold text-gray-100">
+              Develop a Web Application for ordering food via QR Code (Back-End) using PHP.
+            </p>
+            <a
+              href="#"
+              className="inline-block mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white"
+            >
+              View on Github
+            </a>
+          </div>
 
-  {/* Project 2 */}
-  <div className="w-64 h-full bg-gray-100 shadow-lg p-4 rounded-lg" style={{ backgroundColor: "#8291F3" }}>
-    <img src="/lnwlogo.png" alt="Lnw Game" className="w-full h-40 object-cover rounded-xl" />
-    <h3 className="text-xl font-bold pt-4">Lnw Game Shop</h3>
-    <p className="text-sm mt-2 text-left font-semibold text-gray-100">
-      Website for selling in-game items, The website should also include a payment system for adding credits to purchase items on the site
-    </p>
-    <a
-      href="#"
-      className="inline-block mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white"
-    >
-      View on Github
-    </a>
-  </div>
+          {/* Project 2 */}
+          <div className="w-64 h-full bg-gray-100 shadow-lg p-4 rounded-lg" style={{ backgroundColor: "#8291F3" }}>
+            <img src="/lnwlogo.png" alt="Lnw Game" className="w-full h-40 object-cover rounded-xl" />
+            <h3 className="text-xl font-bold pt-4">Lnw Game Shop</h3>
+            <p className="text-sm mt-2 text-left font-semibold text-gray-100">
+              Website for selling in-game items, The website should also include a payment system for adding credits to purchase items on the site
+            </p>
+            <a
+              href="#"
+              className="inline-block mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white"
+            >
+              View on Github
+            </a>
+          </div>
 
-  {/* Project 3 */}
-  <div className="w-64 h-full bg-gray-100 shadow-lg p-4 rounded-lg" style={{ backgroundColor: "#8291F3" }}>
-    <img src="/R.png" alt="RazeCar" className="w-full h-40 object-cover rounded-xl" />
-    <h3 className="text-xl pt-4 font-bold">RazeCar</h3>
-    <p className="text-sm mt-2 text-left font-semibold text-gray-100">
-      An e-commerce website with a shopping cart, payment system, and order tracking feature.(Back-End).
-    </p>
-    <a
-      href="#"
-      className="inline-block mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white"
-    >
-      View on Github
-    </a>
-  </div>
-</div>
+          {/* Project 3 */}
+          <div className="w-64 h-full bg-gray-100 shadow-lg p-4 rounded-lg" style={{ backgroundColor: "#8291F3" }}>
+            <img src="/R.png" alt="RazeCar" className="w-full h-40 object-cover rounded-xl" />
+            <h3 className="text-xl pt-4 font-bold">RazeCar</h3>
+            <p className="text-sm mt-2 text-left font-semibold text-gray-100">
+              An e-commerce website with a shopping cart, payment system, and order tracking feature.(Back-End).
+            </p>
+            <a
+              href="#"
+              className="inline-block mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white"
+            >
+              View on Github
+            </a>
+          </div>
+        </div>
 
       </section>
-      
+
       {/* Contact Section */}
       <section id="contact" className="py-4  mx-96 text-center rounded-xl bg-gray-500 text-gray-100">
         <h2 className="text-3xl  font-bold">Buy me coffee ☕</h2>
