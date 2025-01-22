@@ -3,21 +3,22 @@ import Link from 'next/link'
 const Navbar = () => {
   return (
     <>
-      <nav className='flex justify-between items-center p-4 bg-gray-800 text-xl border-b-2 border-slate-500 text-white font-semibold'>
-        <div className="flex gap-12">
-          <Link href="/">Home</Link>
-          <Link href="/Project">Project</Link>
-          <Link href="/info">About me</Link>
+   {/* Navbar */}
+   <nav className="flex justify-between rounded-b-xl items-center p-4  text-white" style={{backgroundColor: '#5157C0'}}>
+        <div className="flex gap-8 font-semibold text-lg">
+          <Link href="/">Overview</Link>
+          <Link href="#projects">My Project</Link>
+          <Link href="#about">About Me</Link>
         </div>
-        {/* Download CV Button */}
         <a
-          href="/PhirakanCV.pdf" // Correct path to the file in the public folder
+          href="/Phirakan_CV.pdf"
           download
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-300 font-mono"
+          className="px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition"
         >
           Download CV
         </a>
       </nav>
+
     </>
   )
 }
