@@ -6,9 +6,11 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="flex justify-between items-center p-4 text-white bg-[#5157C0] sticky top-0 z-50">
         <div className="flex gap-8 font-semibold text-lg">
-          <Link href="#overview">Overview</Link>
-          <Link href="#projects">My Project</Link>
-          <Link href="#about">About Me</Link>
+        <Link href="#about">About Me</Link>
+        <Link href="#projects">My Project</Link>
+          <Link href="#Tipme">Support Me</Link>
+          
+          
         </div>
         <a
           href="/Phirakan_CV.pdf"
